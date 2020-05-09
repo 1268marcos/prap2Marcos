@@ -1,0 +1,68 @@
+     private int hId;
+     private String hSpecialist;
+     private String hDisease;
+     private int hRating;
+     private String hCreationDate;
+     
+@PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "healthId")
+    private int hId;
+
+    @Nullable
+    @ColumnInfo(name = "healthName")
+    private String hName;
+
+    private String hStyle;
+
+    public Health(@Nullable String name, String style, int score, String creationDate) {
+        hSpecialist = especialista;
+        hDisease = descrição;
+        hRating = avaliação;
+        hCreationDate = creationDate;
+    }
+
+    public int getId() {
+        return hId;
+    }
+
+    public void setId(int id) {
+        hId = id;
+    }
+
+    public String getName() {
+        return hName;
+    }
+
+    public void setName(String name) {
+        hSpecialist = especialista;
+    }
+
+    public String getDisease() {
+        return hDisease;
+    }
+
+    public void setDisease(String descrição) {
+        hDisease = descrição;
+    }
+
+    public int getRating() {
+        return hRating;
+    }
+
+    public void setRating(int avaliação) {
+        hRating = avaliação;
+    }
+
+    public String getCreationDate() {
+        return hCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        hCreationDate = creationDate;
+    }
+
+    private int hRating;
+    private String hCreationDate;
+
+}
