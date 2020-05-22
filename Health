@@ -1,8 +1,18 @@
-     private int hId;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "healthconditions")
+
+public class Health {
+
+
      private String hSpecialist;
      private String hDisease;
-     private int hRating;
-     private String hCreationDate;
+
      
 @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -15,10 +25,10 @@
 
     private String hStyle;
 
-    public Health(@Nullable String name, String style, int score, String creationDate) {
-        hSpecialist = especialista;
-        hDisease = descrição;
-        hRating = avaliação;
+     public Health(@Nullable String specialist, String disease, int rating, String creationDate) {
+        hSpecialist = specialist;
+        hDisease = disease;
+        hRating = rating;
         hCreationDate = creationDate;
     }
 
@@ -33,26 +43,28 @@
     public String getName() {
         return hName;
     }
-
-    public void setName(String name) {
-        hSpecialist = especialista;
+    
+ public void setName(String specialist) {
+        hSpecialist = specialist;
     }
-
+    
     public String getDisease() {
         return hDisease;
     }
 
-    public void setDisease(String descrição) {
-        hDisease = descrição;
+     public void setDisease(String disease) {
+        hDisease = disease;
     }
+
 
     public int getRating() {
         return hRating;
     }
 
-    public void setRating(int avaliação) {
-        hRating = avaliação;
+    public void setDisease(String disease) {
+        hDisease = disease;
     }
+    //nao se usa acentuacao para nome de variaveis
 
     public String getCreationDate() {
         return hCreationDate;
